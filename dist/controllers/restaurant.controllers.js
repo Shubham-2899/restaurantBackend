@@ -1,7 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getRestaurantsByPincode = exports.getRestaurantById = exports.addRestaurant = exports.getRestaurants = void 0;
+exports.getRestaurantsByPincode = exports.getRestaurantById = exports.addRestaurant = exports.getRestaurants = exports.getHomePage = void 0;
+const uuid_1 = require("uuid");
 const fs = require("fs");
+const getHomePage = (req, res) => {
+    res.send("<div><h3>Welcome to Fake Restaurant API</h3></div>");
+};
+exports.getHomePage = getHomePage;
 const getRestaurants = (req, res) => {
     fs.readFile("src/Data/restaurants.json", (err, data) => {
         if (err)
@@ -21,8 +26,10 @@ const addRestaurant = (req, res) => {
         if (err)
             throw err;
         try {
+            const new_res = Object.assign({ id: (0, uuid_1.v4)() }, req.body);
+            console.log("🚀 ~ file: restaurant.controllers.ts:35 ~ fs.readFile ~ req.body.food_type", req.body.food_type);
             let restaurantsData = JSON.parse(data);
-            restaurantsData["restaurants"].push(req.body);
+            restaurantsData["restaurants"].push(new_res);
             fs.writeFile("src/Data/restaurants.json", JSON.stringify(restaurantsData, null, 2), (err) => {
                 if (err)
                     throw err;
@@ -34,14 +41,12 @@ const addRestaurant = (req, res) => {
             console.log("Error pasrsing JSON", err);
         }
     });
-    // res.sendStatus(201);
-    //   console.log("req body", req.body);
     res.status(201).send("Restaurant added successfully");
 };
 exports.addRestaurant = addRestaurant;
 const getRestaurantById = (req, res) => {
     console.log("🚀 ~ file: restaurant.controllers.ts:64 ~ fs.readFile ~ +req.params.id", req.params.id);
-    if (isNaN(req.params.id)) {
+    if (!(0, uuid_1.validate)(req.params.id)) {
         res.status(404).send("Record Not Found or Invalid Id");
     }
     else {
@@ -50,7 +55,7 @@ const getRestaurantById = (req, res) => {
                 throw err;
             try {
                 let restaurantsData = JSON.parse(data);
-                const object = restaurantsData.restaurants.find((obj) => obj.id === +req.params.id);
+                const object = restaurantsData.restaurants.find((obj) => obj.id === req.params.id);
                 console.log("🚀 ~ file: restaurant.controllers.ts:62 ~ fs.readFile ~ object", object);
                 res.status(200).send(object);
                 console.log("restaurant retrived");
