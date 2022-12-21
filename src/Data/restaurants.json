@@ -1,7 +1,18 @@
 {
   "restaurants": [
     {
-      "id": 1,
+      "id": "30483402-e3d2-4c8e-8994-dedbd6dbdfb1",
+      "name": "Zaika Restaurant",
+      "food_type": "veg",
+      "city": "Pune",
+      "area": "Kharadi",
+      "pincode": 411012,
+      "description": "abc sbdf",
+      "opening_time": "7 AM",
+      "closing_time": "11 AM"
+    },
+    {
+      "id": "347a440e-b133-4837-9204-32361ad46f0d",
       "name": "PK Restaurant",
       "food_type": "veg",
       "city": "Pune",
@@ -12,45 +23,12 @@
       "closing_time": "11 AM"
     },
     {
-      "id": 2,
-      "name": "Zaika Restaurant",
-      "food_type": "veg",
+      "id": "528413db-737a-4858-9619-bed335565252",
+      "name": "PK Restaurant",
+      "food_type": "abc",
       "city": "Pune",
       "area": "Kharadi",
       "pincode": 411014,
-      "description": "abc sbdf",
-      "opening_time": "7 AM",
-      "closing_time": "11 AM"
-    },
-    {
-      "id": 3,
-      "name": "Zaika Restaurant",
-      "food_type": "veg",
-      "city": "Pune",
-      "area": "Kharadi",
-      "pincode": 411012,
-      "description": "abc sbdf",
-      "opening_time": "7 AM",
-      "closing_time": "11 AM"
-    },
-    {
-      "id": 4,
-      "name": "Zaika Restaurant",
-      "food_type": "veg",
-      "city": "Pune",
-      "area": "Kharadi",
-      "pincode": 411012,
-      "description": "abc sbdf",
-      "opening_time": "7 AM",
-      "closing_time": "11 AM"
-    },
-    {
-      "id": 5,
-      "name": "Zaika Restaurant",
-      "food_type": "veg",
-      "city": "Pune",
-      "area": "Kharadi",
-      "pincode": 411012,
       "description": "abc sbdf",
       "opening_time": "7 AM",
       "closing_time": "11 AM"

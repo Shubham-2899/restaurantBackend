@@ -1,8 +1,10 @@
 import { Request } from "express";
+
+export type FOOD_TYPE = "veg" | "non-veg" | "both";
 export interface IRestaurant {
-  id: number;
+  id: string;
   name: string;
-  food_type: "veg" | "non-veg" | "both";
+  food_type: FOOD_TYPE;
   city: string;
   area: string;
   pincode: number;
