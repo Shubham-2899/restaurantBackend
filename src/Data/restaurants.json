@@ -1,8 +1,8 @@
 {
   "restaurants": [
     {
-      "id": "30483402-e3d2-4c8e-8994-dedbd6dbdfb1",
-      "name": "Zaika Restaurant",
+      "id": "e04771f2-401b-4efb-a9fc-1001e6272e48",
+      "name": "Sp's biryani",
       "food_type": "veg",
       "city": "Pune",
       "area": "Kharadi",
@@ -12,9 +12,9 @@
       "closing_time": "11 AM"
     },
     {
-      "id": "347a440e-b133-4837-9204-32361ad46f0d",
-      "name": "PK Restaurant",
-      "food_type": "veg",
+      "id": "333240a8-4cab-4249-af66-b1d23d0cc01c",
+      "name": "Pk biryani",
+      "food_type": "both",
       "city": "Pune",
       "area": "Kharadi",
       "pincode": 411014,
@@ -23,12 +23,12 @@
       "closing_time": "11 AM"
     },
     {
-      "id": "528413db-737a-4858-9619-bed335565252",
-      "name": "PK Restaurant",
-      "food_type": "abc",
+      "id": "b3f49e87-87ef-4ec5-890b-a70b575f7b9b",
+      "name": "Apna Punjab",
+      "food_type": "veg",
       "city": "Pune",
       "area": "Kharadi",
-      "pincode": 411014,
+      "pincode": 411012,
       "description": "abc sbdf",
       "opening_time": "7 AM",
       "closing_time": "11 AM"
