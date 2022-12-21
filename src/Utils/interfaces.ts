@@ -17,3 +17,13 @@ export interface IGetRestaurantReq extends Request<{ id: IRestaurant["id"] }> {}
 export interface IGetRestaurantsByPincodeReq
   extends Request<{ pincode: IRestaurant["pincode"] }> {}
 export interface IAddRestaurantReq extends Request {}
+
+export interface IErrorObj {
+  name?: string;
+  food_type?: string;
+  city?: string;
+  pincode?: string;
+  opening_time?: string;
+  closing_time?: string;
+  area?: string;
+}
